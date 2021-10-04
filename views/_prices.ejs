@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Price Management</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <link rel="shortcut icon" href="img/logo/favicon.ico"> -->
+
+
+<!-- local bootstrap -->
+<script src="/javascripts/webfont/webfont.min.js"></script>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/stylesheets/bootstrap.css">
+<link rel="stylesheet" href="/stylesheets/atlantis.min.css">
+<link href="/javascripts/jquery-ui/jquery-ui.css" rel="stylesheet"/>
+<link href="/stylesheets/bootstrap-responsive.css" rel="stylesheet">
+<!-- local style css -->
+<link rel="stylesheet" href="/stylesheets/navbar.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+</head>
+<body>
+<div class="wrapper d-flex align-items-stretch">
+<%- include("./partials/_menu.ejs",{userId:userId,userType:userType,username:username,userImg:userImg}) %>
+<div class="dist-dealer-list section">
+	<div class="container-fluid">
+		<div class="dist-dealer-list-div section-div">
+			<!-- <form action="/pricesByName" method="post">
+				<div class="row">
+					<div class="col-6">
+						<div class="form-group">
+							<input type="text" class="form-control" id="identifier" name="name" placeholder="Search">
+						</div>
+						<div class="col-12">
+
+								<button type="submit" class="btn btn-success w-25">SEARCH</button>
+
+						</div>
+					</div>
+				</div>
+			</form> -->
+			<div class="d-flex justify-content-between mb-2">
+				<h4 class="h4">PRICE <span>LIST</span></h4>
+			</div>
+			<!-- id="horizontalScroll" -->
+			<div class="table-div" style="margin-left: 10rem;" >
+				<table id="basic-datatables" class="display table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Product Name</th>
+						<th>List Price</th>
+						<th>Offer Price</th>
+						<th class="action">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% priceList.forEach(function(price){ %>
+					<tr>
+						<td><%= price.NAME %></td>
+						<td> ₹ &nbsp;<%= price.LISTPRICE %></td>
+						<td>₹ &nbsp;<%= price.OFFERPRICE %></td>
+						<td>
+							<a href="/pricesbyId/Id/<%= price.PRODUCTCONF_ID %>" class="btn btn-dark btn-sm">Edit</a>
+						</td>
+					</tr>
+          <% }); %>
+				</tbody>
+			</table>
+			</div>
+			
+		</div>
+	</div>
+</div>
+</div>
+
+<script src="/javascripts/fontawwesome.js"></script>
+<!-- jQuery -->
+<script src="/javascripts/jquery.min.js"></script>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/atlantis.min.js"></script>
+<script src="/javascripts/jquery-ui/jquery-ui.js"></script>
+<script src="/javascripts/datatables/datatables.min.js"></script>
+<!-- Popper.js -->
+<script src="/javascripts/popper.js"></script>
+<!-- Bootstrap JS -->
+<script src="/javascripts/bootstrap.js"></script>
+<script src="/javascripts/main.js"></script>
+<!-- <script src="/javascripts/vii.js"></script> -->
+<!-- app -->
+<script src="/javascripts/app.js"></script>
+<script>
+$(document).ready(function() {
+	$('#basic-datatables').DataTable({
+	});
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Profiles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<!-- <link rel="shortcut icon" href="img/logo/favicon.ico"> -->
+
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="/stylesheets/bootstrap.css">
+
+<!-- local style css -->
+<link rel="stylesheet" href="/stylesheets/navbar.css">
+<link rel="stylesheet" href="/stylesheets/index.css">
+
+</head>
+<body>
+<div class="wrapper d-flex align-items-stretch">
+	<%- include("./partials/_menu.ejs",{userId:userId,userType:userType,username:username,userImg:userImg}) %>
+<div class="product section">
+	<div class="container-fluid">
+		<div class="product-div section-div">
+			<h4 class="h4">MBM <span>DETAILS / UPDATE</span></h4>
+			<form id="edit_form" action="/update_mbm_details" method="post">
+				<% mbm_details.forEach(function(mbm){ %>
+				<div class="row">
+					
+					<div class="col-6">
+						<div class="form-group">
+							<label for="firstname">MBM Bank Name</label>
+							<input type="text" class="form-control" name="mbm_bank_name" value="<%= mbm.mbm_bank_name %>" placeholder="Bank Name">
+						</div>
+					</div>
+                    <div class="col-6">
+						<div class="form-group">
+							<label for="panNo">MBM Branch Name</label>
+							<input type="text" class="form-control" name="mbm_branch_name" value="<%= mbm.mbm_branch_name %>" placeholder="Branch Name">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="lastname">MBM AC Number</label>
+							<input type="nuumber" class="form-control" name="mbm_ac_number" placeholder="Account Number" value="<%= mbm.mbm_ac_number %>">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="shopname">MBM Bank IFSC Code</label>
+							<input type="text" class="form-control" name="mbm_IFSC_code" value="<%= mbm.mbm_IFSC_code %>" placeholder="IFSC Code">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="emailId">MBM Website</label>
+							<input type="text" class="form-control"name="mbm_website" value="<%= mbm.mbm_website %>" placeholder="Website">
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="address" class="text-area">MBM Address</label>
+							<textarea  id="address" rows="3" name="mbm_address" class="form-control" placeholder="address"><%= mbm.mbm_address %></textarea>
+						</div>
+					</div>
+					<div class="col-6">
+						<div class="form-group">
+							<label for="gstinNo">GSTIN Number</label>
+							<input type="text" class="form-control" name="mbm_gstin" value="<%= mbm.mbm_gstin %>" placeholder="enter gstin number">
+						</div>
+					</div>
+					<div class="col-12">
+						<button type="submit" class="btn btn-success w-25">SUBMIT</button>
+					</div>
+				</div>
+				<% }); %>
+			</form>
+		</div>
+	</div>
+</div>
+</div>
+<script src="/javascripts/jquery.js"></script>
+<script src="/javascripts/fontawwesome.js"></script>
+<!-- jQuery -->
+<script src="/javascripts/jquery.min.js"></script>
+<!-- Popper.js -->
+<script src="/javascripts/popper.js"></script>
+<!-- Bootstrap JS -->
+<script src="/javascripts/bootstrap.js"></script>
+<script src="/javascripts/main.js"></script>
+<!-- <script src="/javascripts/vii.js"></script> -->
+<!-- app -->
+<script src="/javascripts/app.js"></script>
+<script>
+</script>
+</body>
+</html>

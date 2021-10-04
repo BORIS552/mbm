@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>MBM Subscription Plans</title>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<style type="text/css">
+  html, body * { box-sizing: border-box; font-family: 'Open Sans', sans-serif; }
+
+  body {
+    color: #000;
+    overflow-x: hidden;
+    height: 100%;
+    background-color: #B0BEC5;
+    background-repeat: no-repeat
+}
+
+.card0 {
+    box-shadow: 0px 4px 8px 0px #757575;
+    border-radius: 0px
+}
+
+.card2 {
+    margin: 0px 40px
+}
+
+.logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px
+}
+
+.image {
+    width: 360px;
+    height: 280px
+}
+
+.border-line {
+    border-right: 1px solid #EEEEEE
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.twitter {
+    background-color: #1DA1F2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.linkedin {
+    background-color: #2867B2;
+    color: #fff;
+    font-size: 18px;
+    padding-top: 5px;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer
+}
+
+.line {
+    height: 1px;
+    width: 45%;
+    background-color: #E0E0E0;
+    margin-top: 10px
+}
+
+.or {
+    width: 10%;
+    font-weight: bold
+}
+
+.text-sm {
+    font-size: 14px !important
+}
+
+::placeholder {
+    color: #BDBDBD;
+    opacity: 1;
+    font-weight: 300
+}
+
+:-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+::-ms-input-placeholder {
+    color: #BDBDBD;
+    font-weight: 300
+}
+
+input,
+textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #2C3E50;
+    font-size: 14px;
+    letter-spacing: 1px
+}
+
+input:focus,
+textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 1px solid #304FFE;
+    outline-width: 0
+}
+
+button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0
+}
+
+a {
+    color: inherit;
+    cursor: pointer
+}
+
+.btn-blue {
+    background-color: #1A237E;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px
+}
+
+.btn-blue:hover {
+    background-color: #000;
+    cursor: pointer
+}
+
+.bg-blue {
+    color: #fff;
+    background-color: #1A237E
+}
+
+@media screen and (max-width: 991px) {
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .logo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .image {
+        width: 300px;
+        height: 220px
+    }
+
+    .border-line {
+        border-right: none
+    }
+
+    .card2 {
+        border-top: 1px solid #EEEEEE !important;
+        margin: 0px 15px
+    }
+}
+
+
+.rounded-lg {
+  border-radius: 1rem !important;
+}
+
+.text-small {
+  font-size: 0.9rem !important;
+}
+
+.custom-separator {
+  width: 5rem;
+  height: 6px;
+  border-radius: 1rem;
+}
+
+.text-uppercase {
+  letter-spacing: 0.2em;
+}
+
+/*
+*
+* ==========================================
+* FOR DEMO PURPOSES
+* ==========================================
+*
+*/
+
+body {
+  background: #00B4DB;
+  background: -webkit-linear-gradient(to right, #0083B0, #00B4DB);
+  background: linear-gradient(to right, #0083B0, #00B4DB);
+  color: #514B64;
+  min-height: 100vh;
+}
+
+
+</style>
+<body>
+<div class="container-fluid px-1 px-md-2 px-lg-1 px-xl-2 py-5 mx-auto">
+    <section>
+        <div class="container py-5">
+      
+            <header class="text-center mb-5 text-white">
+                <div class="row">
+                  <div class="col-lg-7 mx-auto">
+                    <div class="row"> <img src="/images/mbm.jpg" class="logo" style="width: 4rem; height: 4rem;"> </div>
+                    <h1>Welcome To MBM</h1>
+                    
+                  </div>
+                </div>
+              </header>
+      
+      
+          <div class="row text-center align-items-end">
+            <!-- Pricing Table-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <div class="bg-white p-5 rounded-lg shadow">
+                <h1 class="h6 text-uppercase font-weight-bold mb-4">Basic</h1>
+                <h2 class="h1 font-weight-bold">$199<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+      
+                <div class="custom-separator my-4 mx-auto bg-primary"></div>
+      
+                <ul class="list-unstyled my-5 text-small text-left">
+                  <li class="mb-3">
+                    <i class="fa fa-check mr-2 text-primary"></i> 2 Sales Executive Accounts</li>
+                  <li class="mb-3">
+                    <i class="fa fa-check mr-2 text-primary"></i> 2 Dealer Accounts</li>
+                  <li class="mb-3">
+                    <i class="fa fa-check mr-2 text-primary"></i> 2 Distributor Accounts</li>
+                  <li class="mb-3 text-muted">
+                    <i class="fa fa-times mr-2"></i>
+                    <del>Dedicated Mobile App</del>
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <i class="fa fa-times mr-2"></i>
+                    <del>Reward System</del>
+                  </li>
+                  <li class="mb-3 text-muted">
+                    <i class="fa fa-times mr-2"></i>
+                    <del> Stock Management</del>
+                  </li>
+                </ul>
+                <a href="/subscriptionpayments?amount=199&plan=Basic" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+              </div>
+            </div>
+            <!-- END -->
+      
+      
+            <!-- Pricing Table-->
+            <div class="col-lg-4 mb-5 mb-lg-0">
+              <div class="bg-white p-5 rounded-lg shadow">
+                <h1 class="h6 text-uppercase font-weight-bold mb-4">Pro</h1>
+                <h2 class="h1 font-weight-bold">$399<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+      
+                <div class="custom-separator my-4 mx-auto bg-primary"></div>
+      
+                <ul class="list-unstyled my-5 text-small text-left">
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 5 Sales Executive Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 5 Dealer Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 5 Distributor Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-times mr-2"></i>
+                      Dedicated Mobile App
+                    </li>
+                    
+                    <li class="mb-3 text-muted">
+                      <i class="fa fa-times mr-2"></i>
+                      <del>Reward System</del>
+                    </li>
+                    <li class="mb-3 text-muted">
+                      <i class="fa fa-times mr-2"></i>
+                      <del> Stock Management</del>
+                    </li>
+                  </ul>
+                <a href="/subscriptionpayments?amount=399&plan=Pro" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+              </div>
+            </div>
+            <!-- END -->
+      
+      
+            <!-- Pricing Table-->
+            <div class="col-lg-4">
+              <div class="bg-white p-5 rounded-lg shadow">
+                <h1 class="h6 text-uppercase font-weight-bold mb-4">Enterprise</h1>
+                <h2 class="h1 font-weight-bold">$899<span class="text-small font-weight-normal ml-2">/ month</span></h2>
+      
+                <div class="custom-separator my-4 mx-auto bg-primary"></div>
+      
+                <ul class="list-unstyled my-5 text-small text-left">
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 10 Sales Executive Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 10 Dealer Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-check mr-2 text-primary"></i> 10 Distributor Accounts</li>
+                    <li class="mb-3">
+                      <i class="fa fa-times mr-2"></i>
+                      Dedicated Mobile App
+                    </li>
+                    
+                    <li class="mb-3 text-muted">
+                      <i class="fa fa-times mr-2"></i>
+                      Reward System
+                    </li>
+                    <li class="mb-3 text-muted">
+                      <i class="fa fa-times mr-2"></i>
+                       Stock Management
+                    </li>
+                  </ul>
+                <a href="/subscriptionpayments?amount=899&plan=Enterprise" class="btn btn-primary btn-block p-2 shadow rounded-pill">Subscribe</a>
+              </div>
+            </div>
+            <!-- END -->
+      
+          </div>
+        </div>
+      </section>
+          
+</div>
+</body>
+</html>
